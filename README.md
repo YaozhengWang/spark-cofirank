@@ -8,10 +8,12 @@ the following goals:
 * The algorithm needs to be able to optimize ranking scores directly[2].
 * The algorithm should not require any features besides the actual ratings.
 * The algorithm needs to scale well and parallelize such as to deal with millions of ratings arising from thousands of items and users.
+
 In this project, the Cofirank is parallelized by Spark, which is edited by **IntelliJ IDEA Community Edition 14.1.2**.
 To report issues or request features about TFOCS for Spark, please use our GitHub issues page.
+
 ##Usage Example
-'''
+```
 package org.apache.spark.mllib.recommendation.cofirank
 
 import org.apache.spark.{SparkContext, SparkConf}
@@ -31,7 +33,9 @@ object CofirankSuit {
     model.save(sc, "hdfs://node-6:9000/testdata")
   }
 }
-'''
+```
+
 ##Reference
 [1]Weimer M, Karatzoglou A, Le Q V, et al. CoFiRank - Maximum Margin Matrix Factorization for Collaborative Ranking[J]. 2007, 20:1593-1600.
+
 [2]Dai Y H, Fletcher R. New algorithms for singly linearly constrained quadratic programs subject to lower and upper bounds[J]. Mathematical Programming, 2006, 106(3):403-421.
